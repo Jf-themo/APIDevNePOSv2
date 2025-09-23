@@ -1,0 +1,74 @@
+# API NeoApp Desarrollo V2
+
+## Descripción
+
+API RESTful para la gestión de usuarios, autenticación, facturación y notas crédito, desarrollada en TypeScript y Express. Integra servicios externos y utiliza MySQL como base de datos.
+
+## Estructura del Proyecto
+
+- **src/**: Código fuente
+  - **controllers/**: Lógica de negocio
+  - **models/**: Modelos de datos
+  - **routes/**: Rutas Express
+  - **utils/**: Funciones auxiliares
+  - **interfaces/**: Interfaces TypeScript
+- **docs/**: Documentación JSDoc
+- **.env**: Variables de entorno
+- **tsconfig.json**: Configuración TypeScript
+- **package.json**: Dependencias y scripts
+
+## Instalación
+
+```sh
+npm install
+```
+
+## Configuración
+
+1. Edita `.env` con tus credenciales y configuración de base de datos.
+2. Verifica la configuración de la base de datos en [`src/database.ts`](src/database.ts).
+
+## Ejecución
+
+```sh
+npm run build
+npm start
+```
+
+## Endpoints Principales
+
+### Usuarios
+
+- `GET /list-all-user`: Lista todos los usuarios.
+- `POST /create-user`: Crea un usuario.
+- `POST /sing-in`: Inicio de sesión.
+
+### Autenticación
+
+- `POST /get-token`: Obtiene token de acceso.
+- `POST /get-subscription`: Valida suscripción.
+- `POST /get-dian-acquirer`: Consulta adquirente DIAN.
+
+### Facturación
+
+- `POST /create-bill`: Crea una factura.
+
+### Notas Crédito
+
+- `POST /create-note-credit`: Crea una nota crédito.
+
+## Documentación
+
+La documentación técnica está disponible en [`docs/index.html`](docs/index.html).
+
+## Contribución
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu feature.
+3. Realiza tus cambios y haz un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia Apache 2.0.
+
+---
