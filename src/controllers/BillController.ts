@@ -31,6 +31,7 @@ class BillController {
         name: body[0]?.names,
         identfication: body[0]?.identification,
         identification_document_id: body[0]?.identification_document_id,
+        dv: body[0]?.dv,
         email: body[0]?.email,
         municipality_id: body[0].municipality_id,
       };
@@ -213,7 +214,7 @@ class BillController {
         res.status(201).json(billCreated);
       } else if (response.status === 409) {
         res.status(409).json({
-          msg: "Campos obligatorios vacion",
+          msg: "Campos obligatorios vacios",
           respuesta: response,
         });
       }
