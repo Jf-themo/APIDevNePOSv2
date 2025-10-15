@@ -148,7 +148,8 @@ class BillController {
 
         let billCreated = {
           identification_customer: data?.customer?.identification,
-          dv_customer: data?.customer?.customer,
+          dv_customer: data?.customer?.dv,
+          //dv_customer: data?.customer?.customer,
           graphic_representation_name_customer:
             data?.customer?.graphic_representation_name,
           trade_name_customer: data?.customer?.trade_name_customer,
